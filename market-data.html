@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cyber Insurance Rate Data — CyberInsuranceRates.com</title>
+<meta name="description" content="Public figures on cyber insurance premiums, rate trends, average claim costs, and ransomware claim patterns.">
+<link rel="canonical" href="https://cyberinsurancerates.com/market-data">
+<meta property="og:title" content="Cyber Insurance Rate Data — CyberInsuranceRates.com">
+<meta property="og:description" content="Public figures on cyber insurance premiums, rate trends, average claim costs, and ransomware claim patterns.">
+<meta property="og:url" content="https://cyberinsurancerates.com/market-data">
+<meta property="og:type" content="website">
+<style>
+:root{--abyss:#060d18;--deep:#0b1626;--cyan:#45d0c4;--cyan-dim:#2a8a83;--mist:#e8eef2;--mist-dim:#9aa7b2;--line:rgba(69,208,196,.2)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--abyss);color:var(--mist);font-family:'Inter',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:20px 52px;background:linear-gradient(to bottom,rgba(6,13,24,.94),transparent)}
+nav .brand{font-family:'Fraunces',serif;font-size:16px;letter-spacing:.26em;color:var(--cyan);text-transform:uppercase;font-weight:500}
+nav .price-tag{font-size:13px;letter-spacing:.16em;color:var(--mist-dim);text-transform:uppercase}
+nav .price-tag b{color:var(--cyan);font-weight:600}
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 52px 100px;z-index:1}
+.hero-bg{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.hero-bg video{width:100%;height:100%;object-fit:cover;opacity:.48}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,var(--abyss) 6%,rgba(6,13,24,.68) 48%,rgba(6,13,24,.32) 100%)}
+.eyebrow{font-size:12px;letter-spacing:.44em;text-transform:uppercase;color:var(--cyan);margin-bottom:26px}
+.hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(50px,8.2vw,120px);line-height:1.02;letter-spacing:-.01em;max-width:16ch;overflow-wrap:break-word;word-break:break-word}
+.hero h1 em{font-style:italic;color:var(--cyan)}
+.hero .lede{margin-top:28px;max-width:58ch;font-size:19px;color:var(--mist-dim);font-weight:300}
+.hero-cta{margin-top:46px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:18px 46px;background:var(--cyan);color:var(--abyss);text-decoration:none;font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;transition:.35s;border:1px solid var(--cyan)}
+.btn:hover{background:transparent;color:var(--cyan)}
+.btn.ghost{background:transparent;color:var(--mist);border-color:rgba(232,238,242,.32)}
+.btn.ghost:hover{border-color:var(--cyan);color:var(--mist)}
+section{position:relative;z-index:1;padding:130px 52px;max-width:1300px;margin:0 auto}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+.kicker{font-size:12px;letter-spacing:.44em;text-transform:uppercase;color:var(--cyan-dim);margin-bottom:22px}
+h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(38px,5vw,68px);line-height:1.12;margin-bottom:36px}
+h2 em{font-style:italic;color:var(--cyan)}
+.body-copy{font-size:18px;color:var(--mist-dim);max-width:70ch;margin-bottom:22px}
+.body-copy strong{color:var(--mist);font-weight:500}
+.pull{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(24px,3vw,36px);line-height:1.42;color:var(--mist);border-left:2px solid var(--cyan);padding-left:34px;margin:56px 0;max-width:32ch}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:66px;align-items:center;margin-top:24px}
+.duo img{width:100%;height:540px;object-fit:cover;filter:saturate(.9) contrast(1.03)}
+.duo .cap{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan-dim);margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:74px}
+.stat{background:var(--abyss);padding:56px 42px}
+.stat .n{font-family:'Fraunces',serif;font-size:clamp(42px,4.6vw,66px);color:var(--cyan);font-weight:500}
+.stat .l{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--mist-dim);margin-top:12px}
+.band{position:relative;z-index:1;margin:44px 0}
+.band img{width:100%;height:440px;object-fit:cover;opacity:.88}
+.buyers{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px}
+.buyer{border:1px solid var(--line);padding:46px 38px;transition:.35s;background:rgba(11,22,38,.55)}
+.buyer:hover{border-color:var(--cyan);transform:translateY(-6px)}
+.buyer h3{font-family:'Fraunces',serif;font-weight:500;font-size:24px;margin-bottom:16px;color:var(--mist)}
+.buyer p{font-size:15px;color:var(--mist-dim)}
+.buyer .read{display:inline-block;margin-top:20px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--cyan);text-decoration:none;border-bottom:1px solid var(--cyan-dim);padding-bottom:5px;transition:.3s}
+.buyer .read:hover{border-color:var(--cyan);color:var(--mist)}
+.cta-panel{position:relative;z-index:1;text-align:center;padding:150px 52px;overflow:hidden}
+.cta-panel .bg{position:absolute;inset:0;z-index:-1}
+.cta-panel .bg img{width:100%;height:100%;object-fit:cover;opacity:.26}
+.cta-panel .bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(6,13,24,.3),var(--abyss) 92%)}
+.cta-panel h2{max-width:21ch;margin:0 auto 26px}
+.price-big{font-family:'Fraunces',serif;font-size:clamp(58px,7.2vw,100px);color:var(--cyan);font-weight:500;margin:12px 0 38px}
+footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:46px 52px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--mist-dim);letter-spacing:.08em}
+footer a{color:var(--cyan);text-decoration:none}
+@media(max-width:900px){nav,.hero,section{padding-left:24px;padding-right:24px}.duo,.buyers,.stats{grid-template-columns:1fr}.duo img{height:340px}}
+</style>
+<style>
+/* --- Market-data page additions (staged page only) --- */
+main.wrap{max-width:920px;margin:0 auto;padding:118px 20px 64px}
+main.wrap h1,main.wrap h2,main.wrap h3{overflow-wrap:break-word;word-break:break-word}
+main.wrap h1{font-size:clamp(30px,6vw,52px);line-height:1.12;margin:12px 0 10px}
+main.wrap h2{font-size:clamp(22px,4vw,30px);line-height:1.25;margin:44px 0 12px}
+main.wrap h3{font-size:19px;margin:26px 0 8px}
+main.wrap p,main.wrap li{font-size:17px;line-height:1.7;margin:0 0 14px}
+main.wrap ul{padding-left:22px}
+.stamp{display:inline-block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:.85;border:1px solid rgba(255,255,255,.25);padding:8px 14px}
+.lede{font-size:19px;line-height:1.7;opacity:.92}
+.statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:22px 0}
+.stat{border:1px solid rgba(255,255,255,.22);padding:18px 20px}
+.stat b{display:block;font-size:30px;line-height:1.2;margin-bottom:6px;overflow-wrap:break-word}
+.stat span{font-size:15px;line-height:1.55;display:block}
+.figtable{width:100%;border-collapse:collapse;margin:18px 0 26px;font-size:16px}
+.figtable th,.figtable td{text-align:left;padding:11px 10px;border-bottom:1px solid rgba(255,255,255,.18);vertical-align:top;overflow-wrap:break-word}
+.figtable th{font-size:13px;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.figtable td a,.stat a,main.wrap p a,main.wrap li a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.src{font-size:14px;opacity:.85}
+.buybox{border:1px solid rgba(255,255,255,.3);padding:22px 24px;margin:36px 0}
+.buybox a{color:inherit}
+.buybox .price{font-size:30px;font-weight:700;display:block;margin:6px 0}
+.note{background:rgba(255,255,255,.06);border-left:3px solid rgba(255,255,255,.4);padding:16px 20px;margin:26px 0}
+.note p{font-size:15px}
+footer{padding:32px 20px;text-align:center;font-size:14px}
+footer a{color:inherit}
+@media(max-width:520px){main.wrap{padding-top:96px}nav{padding:16px 18px!important}.figtable{font-size:14px}.figtable th,.figtable td{padding:9px 6px}}
+
+/* Phase 1 assembly 2026-10-31 */
+@media (max-width:900px){h1{font-size:clamp(44px,11vw,72px)!important}}
+@media (max-width:900px){.eyebrow,.kicker{letter-spacing:.18em!important}}
+@media (max-width:900px){nav{background:#060d18!important;backdrop-filter:none!important}}
+
+/* Phase 1 assembly 2026-10-31 — nav solid correction */
+@media (max-width:900px){nav{background:rgb(6,13,24)!important;backdrop-filter:none!important}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "cyberinsurancerates.com market data",
+  "description": "Public figures on cyber insurance premiums, rate trends, average claim costs, and ransomware claim patterns.",
+  "url": "https://cyberinsurancerates.com/market-data",
+  "temporalCoverage": "2023/2025",
+  "creator": {
+    "@type": "Organization",
+    "name": "Prime Domain Capital"
+  },
+  "sourceOrganization": [
+    {
+      "@type": "Organization",
+      "url": "https://openkoda.com/cyber-insurance-statistics/"
+    },
+    {
+      "@type": "Organization",
+      "url": "https://medhacloud.com/blog/cyber-insurance-statistics-2026"
+    },
+    {
+      "@type": "Organization",
+      "url": "https://www.ibm.com/security/data-breach?intcmp=NoOff_ibm_blog_body-blog-image_ext"
+    }
+  ],
+  "dateModified": "2026-10-31",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+<style>
+/* Mobile rendering fix 2026-10-31: domain H1 lines, stacked nav, header clearance */
+@media (max-width:900px){
+main h1{overflow-wrap:normal!important;word-break:normal!important}
+nav:not(.toc){flex-direction:column!important;align-items:flex-start!important;gap:4px!important;padding-top:16px!important;padding-bottom:16px!important;padding-left:20px!important;padding-right:20px!important}
+.topbar{flex-direction:column!important;align-items:flex-start!important;gap:4px!important;padding-top:16px!important;padding-bottom:16px!important;padding-left:20px!important;padding-right:20px!important}
+main{padding-top:120px!important}
+main h1{font-size:clamp(30px,8.5vw,58px)!important;line-height:1.15!important}
+}
+</style>
+</head>
+<body>
+<nav><div class="brand">Prime Domain Capital</div><a class="cta" href="https://www.afternic.com/domain/cyberinsurancerates.com">Buy Now — $19,888</a></nav>
+<main class="wrap">
+<span class="stamp">Last updated: October 31, 2026</span>
+<p class="src" style="margin-top:14px">Market data · Cyber insurance premiums, rate trends, and claim costs</p>
+<h1>Cyber cover got cheaper. Claims did not get simple.</h1>
+
+<p class="lede">After three years of punishing rate increases, cyber insurance pricing turned in 2025 — and kept turning. Premiums fell while ransomware demands climbed, a combination that looks contradictory until you separate price from loss: carriers are charging less per dollar of cover, but the claims that do arrive, especially extortion claims, are bigger and messier than before.</p>
+<h2>Headline figures</h2>
+<div class="statgrid">
+<div class="stat"><b>−7%</b><span>Global cyber insurance rates in Q2 2025, as reported by Marsh. <a class="src" href="https://openkoda.com/cyber-insurance-statistics/">Source: Marsh, via Openkoda compilation</a></span><span class="trend" style="font-size:14px;opacity:.85;display:block;margin-top:8px">Trend: ▼ Down 7% vs prior period (Marsh, Q2 2025)</span></div> <div class="stat"><b>−4%</b><span>Global cyber insurance rates in Q2 2026, as reported by Marsh. <a class="src" href="https://openkoda.com/cyber-insurance-statistics/">Source: Marsh, via Openkoda compilation</a></span><span class="trend" style="font-size:14px;opacity:.85;display:block;margin-top:8px">Trend: ▼ Down 4% (a softer decline than Q2 2025: −7%)</span></div>
+<div class="stat"><b>−6%</b><span>Average cyber premium change in 2025, after increases of 50% in 2022 and 28% in 2023. <a class="src" href="https://medhacloud.com/blog/cyber-insurance-statistics-2026">Source: Marsh Global Insurance Market Index, via Medha Cloud</a></span><span class="trend" style="font-size:14px;opacity:.85;display:block;margin-top:8px">Trend: ▼ Down 6% in 2025, after increases of 50% in 2022 and 28% in 2023</span></div>
+<div class="stat"><b>$116,000</b><span>Average cyber claim loss in 2025, as claims frequency rose 3% and severity fell 19%. <a class="src" href="https://openkoda.com/cyber-insurance-statistics/">Source: Coalition 2026 Cyber Claims Report, via Openkoda</a></span><span class="trend" style="font-size:14px;opacity:.85;display:block;margin-top:8px">Trend: Frequency ▲ up 3%; severity ▼ down 19% vs prior year</span></div>
+<div class="stat"><b>$1,740/yr</b><span>Median annual premium for businesses with fewer than 250 employees, down from $2,100 in 2024. <a class="src" href="https://medhacloud.com/blog/cyber-insurance-statistics-2026">Source: Coalition, via Medha Cloud</a></span><span class="trend" style="font-size:14px;opacity:.85;display:block;margin-top:8px">Trend: ▼ Down vs 2024: $2,100</span></div>
+</div>
+<p>Trend column: each figure is compared with its prior period from the same source, with the prior figure shown. Where no prior-period figure from the same source was available, the figure is labeled Baseline (October 2026) — trend tracking starts with the next refresh.</p><table class="figtable"><tr><th>Figure</th><th>Value</th><th>Source</th><th>Trend vs prior period</th></tr>
+<tr><td>Initial ransomware demands, 2025 change</td><td>Up 47% year over year, to more than $1M</td><td><a href="https://openkoda.com/cyber-insurance-statistics/">Coalition 2026 Cyber Claims Report, via Openkoda</a></td><td>▲ Up 47% year over year (prior-year demand figure not stated on the page; add it at the next refresh)</td></tr>
+<tr><td>Policyholders refusing to pay ransom, 2025</td><td>Record 86%</td><td><a href="https://openkoda.com/cyber-insurance-statistics/">Coalition, via Openkoda</a></td><td>Baseline (October 2026) — trend tracking starts with the next refresh</td></tr>
+<tr><td>Dual-extortion share of ransomware claims; average cost</td><td>70% of claims; ~$302,000 (about twice encryption-only)</td><td><a href="https://openkoda.com/cyber-insurance-statistics/">Coalition, via Openkoda</a></td><td>Baseline (October 2026) — trend tracking starts with the next refresh</td></tr>
+<tr><td>Closed claims resolved with no out-of-pocket loss</td><td>64%</td><td><a href="https://openkoda.com/cyber-insurance-statistics/">Coalition, via Openkoda</a></td><td>Baseline (October 2026) — trend tracking starts with the next refresh</td></tr>
+<tr><td>U.S. cyber policies in force</td><td>4.37M in 2023, roughly flat through 2024</td><td><a href="https://openkoda.com/cyber-insurance-statistics/">Openkoda compilation</a></td><td>▬ Flat vs 2023: 4.37 million (roughly flat through 2024)</td></tr>
+<tr><td>Global average data breach cost, 2025; U.S. average</td><td>$4.44M global; $10.22M U.S.</td><td><a href="https://www.ibm.com/security/data-breach?intcmp=NoOff_ibm_blog_body-blog-image_ext">IBM Cost of a Data Breach Report 2025</a></td><td>▼ Global down vs 2024: $4.88 million; ▲ U.S. up vs 2024: $9.36 million (IBM Cost of a Data Breach Report 2024, fetched this session)</td></tr>
+</table>
+<p>The flat policy count is the figure that should worry the industry more than any rate index. Cheaper cover mostly meant existing buyers paying less, not new buyers arriving — so the protection gap is unchanged while the threat keeps professionalizing. For a buyer, the practical read is narrow: price is negotiable again, but underwriters still discount documented controls, and the claims data rewards fast reporting and refused ransoms more than any single product feature.</p>
+<div class="note"><h3>Methodology</h3><p>Included: public rate and claims figures attributed to Marsh and Coalition in public compilations, plus IBM's 2025 breach-cost study. Excluded: carrier rate cards, broker quotes, and any Aon or Munich Re primary figure — none was verified this session. Marsh and Coalition figures are shown as attributed in the compilations that publish them, since the primary index and claims report pages were not fetched this session.</p><p><strong>Disclaimer:</strong> Aggregated public estimates for information only, not investment or professional advice. Premiums vary by revenue, sector, controls, and limits.</p></div>
+
+<div class="buybox">
+<span>This domain is for sale</span>
+<span class="price">Buy Now — $19,888</span>
+<p>Secure transfer via <a href="https://www.afternic.com/domain/cyberinsurancerates.com">Afternic</a> &middot; Inquiries: <a href="mailto:info@primedomaincapital.com">info@primedomaincapital.com</a></p>
+</div>
+<h2>Changelog</h2>
+<ul>
+<li>October 2026: Initial edition — rates and premiums, claim losses, ransomware patterns, policy counts, and breach costs established; trend indicators added to every figure (prior-period figures shown where the same source publishes them; all other figures labeled Baseline (October 2026)).</li>
+<li><strong>October 31, 2026:</strong> Marsh Q2 2026 global cyber rate (−4%) added. Existing Marsh/Coalition figures spot-checked and confirmed.</li>
+</ul>
+</main>
+<footer><p>Offered by <strong>Prime Domain Capital</strong> &middot; Private holder of category-defining domains</p><p><a href="mailto:info@primedomaincapital.com">info@primedomaincapital.com</a></p></footer>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1407571ec8bc45c3a082c91096558135"}'></script>
+<p class="back-home" style="display:block;text-align:center;padding:28px 16px;font-size:15px"><a href="https://cyberinsurancerates.com/" style="color:inherit">&larr; Back to cyberinsurancerates.com</a></p>
+</body>
+</html>
